@@ -1,0 +1,14 @@
+# Credentials - never commit these
+ftp-settings.json
+htdocs/config/config.php
+
+# Logs and runtime data
+htdocs/storage/logs/*.log
+
+# User-uploaded content (not source code)
+htdocs/uploads/*
+!htdocs/uploads/.htaccess
+
+# Editor/OS clutter
+*.copy
+.DS_Store

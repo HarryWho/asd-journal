@@ -1,0 +1,11 @@
+# Defense in depth: even though every uploaded file is validated and
+# re-encoded server-side, this folder should never execute anything as
+# a script - only ever serve files as static content.
+
+php_flag engine off
+Options -Indexes
+
+<FilesMatch "\.(php|phtml|php3|php4|php5|php7|pl|py|cgi|sh|exe)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
