@@ -67,7 +67,7 @@
             <?php if (!empty($post['tags'])): ?>
                 <div class="tag-list">
                     <?php foreach ($post['tags'] as $t): ?>
-                        <a class="tag-chip" href="<?= BASE_URL ?>post/tag/<?= urlencode($t['slug']) ?>">
+                        <a class="tag-chip" href="<?= BASE_URL ?>post/tag/<?= urlencode($t['slug']) ?>?page=<?= $page ?? 1 ?>">
                             <?= htmlspecialchars($t['name']) ?>
                         </a>
                     <?php endforeach; ?>

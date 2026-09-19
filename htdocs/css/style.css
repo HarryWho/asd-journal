@@ -58,20 +58,20 @@ select:focus-visible {
 
 @media (prefers-reduced-motion: reduce) {
     * {
-            transition: none !important;
+        transition: none !important;
             animation: none !important;
         }
 }
 
 .site-header {
     position: sticky;
-        top: 0;
+    top: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1.5rem 2rem;
     border-bottom: 1px solid var(--moss);
-        z-index: 100;
+    z-index: 100;
         background: var(--paper) url('../images/writing-top.jpeg') no-repeat center center/cover;
         opacity: 0.9;
         color: var(--ink);
@@ -81,15 +81,17 @@ select:focus-visible {
     font-family: 'Fraunces', Georgia, serif;
     font-size: 1.4rem;
     font-weight: 600;
-    color: var(--highlight);
+    color: var(--moss-deep);
     text-decoration: none;
     letter-spacing: -0.01em;
+    margin-left: 10%;
 }
 
 .site-header nav {
     display: flex;
     align-items: center;
     gap: 1.25rem;
+    margin-right: 10%;
 }
 
 .site-header nav a,
@@ -104,6 +106,59 @@ select:focus-visible {
     color: var(--stone);
 }
 
+/* Dropdown */
+/* Dropdown Button */
+.dropbtn {
+    background-color:
+        /*#3498DB;*/
+        transparent;
+    color: var(--focus);
+    padding: 6px;
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover,
+.dropbtn:focus {
+    background-color: inherit;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+
+
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {
+    display: block;
+}
 .site-main {
     max-width: 700px;
     margin: 0 auto;
@@ -124,7 +179,7 @@ select:focus-visible {
     padding: 1.5rem 1.75rem 1.5rem 1.75rem;
     border-left: 2px solid var(--moss);
     margin-left: 0.25rem;
-background: var(--paper-raised);
+    background: var(--paper-raised);
 }
 
 .post-card {
@@ -358,6 +413,7 @@ button[type="submit"]:hover {
     padding: 0;
     text-decoration: underline;
 }
+
 .admin-actions a:hover,
 .admin-actions button:hover {
     color: var(--moss-deep);
@@ -385,6 +441,7 @@ button[type="submit"]:hover {
 .pagination .disabled {
     color: var(--border);
 }
+
 .pagination .page-indicator {
     color: var(--stone);
     font-family: 'IBM Plex Mono', monospace;
@@ -393,16 +450,16 @@ button[type="submit"]:hover {
 
 @media (max-width: 560px) {
     .site-header {
-            flex-direction: column;
+        flex-direction: column;
             align-items: flex-start;
             gap: 0.75rem;
             padding: 1.25rem 1.5rem;
         }
-    
+        
         .site-main {
             padding: 2rem 1.25rem 3rem;
         }
-    
+        
         .post-full h1 {
             font-size: 1.6rem;
         }
@@ -466,6 +523,7 @@ button[type="submit"]:hover {
     padding: 0 !important;
     font-size: 0.8rem !important;
 }
+
 .link-text-btn:hover {
     color: var(--moss-deep) !important;
 }
@@ -599,6 +657,7 @@ button[type="submit"]:hover {
     color: var(--stone);
     border: 1px solid var(--border);
 }
+
 .moderation-actions .reject-btn:hover {
     color: #a05a4a;
     border-color: #a05a4a;
@@ -761,6 +820,7 @@ button[type="submit"]:hover {
     align-items: center;
     gap: 0.35rem;
 }
+
 .archive-list {
     display: flex;
     flex-direction: column;
@@ -806,6 +866,7 @@ button[type="submit"]:hover {
     font-size: 0.8rem;
     color: var(--stone);
 }
+
 @media print {
     .no-print {
         display: none !important;
