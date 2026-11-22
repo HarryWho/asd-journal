@@ -20,7 +20,6 @@ class LikeController extends Controller
             echo json_encode(['error' => 'Invalid post']);
             return;
         }
-
         $identifier = $this->getIdentifier();
         $newCount   = $this->likeModel->toggle($postId, $identifier);
         $liked      = $this->likeModel->hasLiked($postId, $identifier);
